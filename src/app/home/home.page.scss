@@ -1,10 +1,26 @@
-.titulo1  {
-  color:red;
-}
-.titulo2  {
-  color:red;
+.background-toolbar{
+  --background: url(/assets/img/background-gradiente.jpg) !important;
 }
 
-.boton1{
-  color:green;
+.item-fondo{
+        /** background **/
+    --background-focused:#f5f5f5;
+    --background-hover:#f5f5f5;
+    --background:#f5f5f5
+      /** objetos del item **/
+
+   /** color del item (dentro objetos,letras) **/
+}
+
+.iconopx{
+  min-width: 30px;
+  min-height: 30px;
+}
+
+ion-chip{
+  margin-left: 4%;
+  margin-right: 2%;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  --background: #0291db !important;
 }

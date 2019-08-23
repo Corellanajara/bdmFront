@@ -1,53 +1,134 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+<ion-header class="no-background">
+  <ion-toolbar class="background-toolbar">
+
+    <ion-buttons>
+      <ion-menu-button slot="start "color="blanco"></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-       <ion-icon slot="end" name="notifications"></ion-icon>
+       <ion-icon slot="end" name="notifications" color="blanco"></ion-icon>
     </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <h2>Home deberia</h2>
-    tener datos de el estado actual de las peticiones, mas a nivel de graficas y reporteria
-    ponte tu
-    <br>
-    <ion-chip>
-      <ion-label>35 traslados exitosos</ion-label>
-    </ion-chip>
 
-    <ion-chip color="secondary">
-      <ion-label color="dark">12 solicitudes de Residuos</ion-label>
-    </ion-chip>
+<ion-content color="fondo">
+  <ion-toolbar class="background-toolbar">
+    <label>
+      <ion-title color="blanco" class="fuente-roboto fuente-titulo">Constructora Linda</ion-title>
 
-    <ion-chip color="secondary">
-      <ion-label color="dark">17 otras cosas</ion-label>
-    </ion-chip>
+      <ion-chip class="chip1">
+        <ion-icon class="iconopx" src="/assets/icon/camion.svg" color="blanco"></ion-icon>
+        <ion-label color="blanco">35 traslados exitosos</ion-label>
+      </ion-chip>
 
+      <ion-chip>
+        <ion-icon src="/assets/icon/solicitud.svg" color="blanco"></ion-icon>
+        <ion-label color="blanco">12 solicitudes de Residuos</ion-label>
+      </ion-chip>
+    </label>
+  </ion-toolbar>
+
+  <label>
     <ion-card>
-      <ion-item href="#" class="activated">
-        <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-item class="activated">
+        <ion-icon src="/assets/icon/estadisticas.svg" slot="start"></ion-icon>
+        <ion-label>Estadísticas</ion-label>
+        <ion-icon name="more" slot="end"></ion-icon>
+      </ion-item>
+
+      <ion-item lines="none" href="#" class="activated">
         <ion-label>624 kilos de madera han sido reciclados</ion-label>
       </ion-item>
 
-      <ion-item href="#">
-        <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-item lines="none" href="#">
         <ion-label>1.4 toneladas de cemento fueron despachados</ion-label>
       </ion-item>
 
-      <ion-item class="activated">
-        <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-item lines="none" class="activated">
         <ion-label>3 solicitudes nunca fueron respondidas</ion-label>
       </ion-item>
 
-      <ion-item>
+      <ion-item lines="none">
         <ion-icon name="walk" slot="start"></ion-icon>
         <ion-label>Que se yo , no soy cientifico</ion-label>
       </ion-item>
     </ion-card>
+
+    <ion-card>
+      <ion-item class="activated">
+        <ion-icon src="/assets/icon/rendimiento.svg" slot="start"></ion-icon>
+        <ion-label>Rendimiento</ion-label>
+        <ion-icon name="more" slot="end"></ion-icon>
+      </ion-item>
+
+      <ion-item lines="none" class="item-fondo">
+        <ion-label>No hay registros sobre el rendimiento</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item class="activated">
+        <ion-icon src="/assets/icon/actividades.svg" slot="start"></ion-icon>
+        <ion-label>Actividades</ion-label>
+        <ion-icon name="more" slot="end"></ion-icon>
+      </ion-item>
+
+      <ion-item lines="none"  class="item-fondo">
+        <ion-icon name="walk" slot="start"></ion-icon>
+        <ion-label>Que se yo , no soy cientifico</ion-label>
+      </ion-item>
+
+      <ion-item lines="none"  class="item-fondo">
+        <ion-icon name="walk" slot="start"></ion-icon>
+        <ion-label>Que se yo , no soy cientifico</ion-label>
+      </ion-item>
+
+      <ion-item lines="none"  class="item-fondo">
+        <ion-icon name="walk" slot="start"></ion-icon>
+        <ion-label>Que se yo , no soy cientifico</ion-label>
+      </ion-item>
+
+      <ion-item lines="none"  class="item-fondo">
+        <ion-icon name="walk" slot="start"></ion-icon>
+        <ion-label>Que se yo , no soy cientifico</ion-label>
+      </ion-item>
+
+      <ion-item lines="none"  class="item-fondo">
+        <ion-icon name="walk" slot="start"></ion-icon>
+        <ion-label>Que se yo , no soy cientifico</ion-label>
+      </ion-item>
+    </ion-card>
+
+    </label>
+
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        Bar Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Doughnut Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Line Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+</div>
+
 </ion-content>

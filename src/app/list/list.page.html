@@ -1,24 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+<ion-header class="no-background">
+  <ion-toolbar color="rojo">
+
+    <ion-buttons>
+      <ion-menu-button slot="start "color="blanco"></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Lista de solicitudes activas
-    </ion-title>
+    <ion-buttons slot="end">
+       <ion-icon slot="end" name="notifications" color="blanco"></ion-icon>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
-  <ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="ofertas">
-      <ion-label>Oferta</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="demandas">
-      <ion-label>Demanda</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+<ion-content color="fondo">
+  <ion-toolbar color="rojo">
+    <label>
+      <ion-title color="blanco" class="fuente-roboto fuente-titulo">Lista de Solicitudes Activas</ion-title>
+        <ion-segment (ionChange)="segmentChanged($event)">
+          <ion-segment-button value="ofertas">
+            <ion-label color="blanco">Oferta</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="demandas">
+            <ion-label color="blanco">Demanda</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+    </label>
+  </ion-toolbar>
+
   <ion-list  *ngIf="mostrarOfertas">
     <ion-item *ngFor="let item of ofertas" >
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
@@ -32,7 +40,7 @@
   <ion-list  *ngIf="mostrarDemandas">
     <ion-item *ngFor="let item of demandas" >
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}} 
+      {{item.title}}
       <div class="item-note" slot="end">
         {{item.note}}
       </div>
