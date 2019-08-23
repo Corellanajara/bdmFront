@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams , ModalController } from '@ionic/angular';
 import { OfertasService } from '../../_services/ofertas.service';
+import { MapaPage } from './mapa/mapa.page';
 
 interface Oferta {
   titulo : string,
@@ -41,4 +42,30 @@ export class CrearPage implements OnInit {
       'dismissed': true
     });
   }
+
+  async mostrarModalMapa() {
+    const modal = await this.modalCtrl.create({
+      component: MapaPage,
+      cssClass: 'my-custom-modal-css',
+      componentProps: {
+        'datos': 'Douglas',
+        'lastName': 'Adams',
+        'middleInitial': 'N'
+      }
+    });
+    modal.onDidDismiss().then(modal=>{
+      //console.log("en crear",modal);
+       if(modal.data.dismissed){
+        console.log("Se cerro el modal");
+       }else{
+        console.log("Se enviaron datos",modal);
+        let lat = modal.data.lat;
+        let lng = modal.data.lng;
+        this.oferta.direccion = lat +","+lng;
+      }
+    });
+    return await modal.present();
+  }
+
+
 }

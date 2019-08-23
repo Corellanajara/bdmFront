@@ -13,9 +13,13 @@ import { OfertasService } from './_services/ofertas.service';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CrearPage } from './ofertas/crear/crear.page';
+
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { MapaPage } from './ofertas/crear/mapa/mapa.page';
+
 @NgModule({
-  declarations: [ CrearPage,AppComponent],
-  entryComponents: [ CrearPage],
+  declarations: [ CrearPage,MapaPage,AppComponent],
+  entryComponents: [ CrearPage,MapaPage],
   imports: [
     BrowserModule,
     FormsModule,
@@ -27,6 +31,7 @@ import { CrearPage } from './ofertas/crear/crear.page';
     StatusBar,
     OfertasService,
     SplashScreen,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

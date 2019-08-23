@@ -21,8 +21,14 @@ const routes: Routes = [
     path: 'ofertas',
     loadChildren: './ofertas/ofertas.module#OfertasPageModule'
   },
-  { path: 'crear', loadChildren: './ofertas/crear/crear.module#CrearPageModule' },
-  
+  { path: 'crear',
+   loadChildren: './ofertas/crear/crear.module#CrearPageModule'
+  },
+  { path: 'mapa',
+   loadChildren: './ofertas/crear/mapa/mapa.module#MapaPageModule'
+  },
+
+
 ];
 
 @NgModule({
