@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
 
 .no-background{
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .fuente-roboto{
@@ -25,7 +25,8 @@
  min-width:5%;
  max-width:15%;
  border-right:var(--border);
- border-left:0
+ border-left:0;
+ margin-right:-1%;
 }
 
 .margen-list{
@@ -34,13 +35,16 @@
   margin-top: 0;
 }
 
+.centrado{
+  text-align: center;
+}
+
 .item-menu{
       /** background **/
-  --background-focused:#1b2034;
-  --background-hover:#1b2034;
-  --background:#0d101a;
+  --background-focused:#262f3d;
+  --background-hover:#262f3d;
+  --background:#19212b;
     /** objetos del item **/
-
     /** color del item (dentro objetos,letras) **/
  --color:#fff;
 

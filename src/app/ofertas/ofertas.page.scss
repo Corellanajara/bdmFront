@@ -1,5 +1,17 @@
 /** css Input **/
 
+.background-degradadooferta{
+  --background: linear-gradient(to right,#76cced, #5f78eb);
+}
+
+.no-background{
+  background:transparent;
+}
+
+.margin-card{
+  margin-top: 4%;
+}
+
 .form{
     width: 100%;
     position: relative;

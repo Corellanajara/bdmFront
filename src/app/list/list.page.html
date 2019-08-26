@@ -1,5 +1,5 @@
 <ion-header class="no-background">
-  <ion-toolbar color="rojo">
+  <ion-toolbar class="background-degradadolist">
 
     <ion-buttons>
       <ion-menu-button slot="start "color="blanco"></ion-menu-button>
@@ -13,7 +13,7 @@
 
 
 <ion-content color="fondo">
-  <ion-toolbar color="rojo">
+  <ion-toolbar class="background-degradadolist">
     <label>
       <ion-title color="blanco" class="fuente-roboto fuente-titulo">Lista de Solicitudes Activas</ion-title>
         <ion-segment (ionChange)="segmentChanged($event)">
@@ -27,6 +27,7 @@
     </label>
   </ion-toolbar>
 
+<ion-card class="margin-card">
   <ion-list  *ngIf="mostrarOfertas">
     <ion-item *ngFor="let item of ofertas" >
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
@@ -36,7 +37,9 @@
       </div>
     </ion-item>
   </ion-list>
+</ion-card>
 
+<ion-card class="margin-card">
   <ion-list  *ngIf="mostrarDemandas">
     <ion-item *ngFor="let item of demandas" >
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
@@ -46,5 +49,6 @@
       </div>
     </ion-item>
   </ion-list>
+</ion-card>
 
 </ion-content>
