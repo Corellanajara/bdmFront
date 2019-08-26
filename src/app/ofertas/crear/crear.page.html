@@ -1,19 +1,23 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="no-background">
+  <ion-toolbar class="background-degradadocrear">
     <ion-buttons slot="start" (click)="dismiss()">
-      <ion-icon name="return-left"></ion-icon>
+         <ion-icon slot="end" name="arrow-back" color="blanco"></ion-icon>
     </ion-buttons>
-    <ion-title>crear</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<h2 style="text-align:center">Crea tu oferta!</h2>
+  <ion-toolbar class="background-degradadocrear">
+    <ion-title style="text-align:center" class="centrado" color="blanco">Crea tu oferta</ion-title>
+  </ion-toolbar>
+
 <div class="crear">
+
   <ion-item>
     <ion-label position="floating">Titulo</ion-label>
     <ion-input [(ngModel)]="oferta.titulo"></ion-input>
   </ion-item>
+
   <ion-item>
    <ion-label>Origen del residuo / Tipo Proyecto</ion-label>
    <ion-select placeholder="Selecciona tipo" cancelText="Cancelar" okText="Aceptar" [(ngModel)]="oferta.tipo">
@@ -25,10 +29,12 @@
     <ion-label position="floating">Dirección de despacho</ion-label>
     <ion-input [(ngModel)]="oferta.direccion"></ion-input>
   </ion-item>
+
   <ion-item>
    <ion-label>Fecha de despacho</ion-label>
     <ion-datetime displayFormat="D / MM / YYYY" min="2019" max="2020" [(ngModel)]="oferta.fechaDespacho" ></ion-datetime>
   </ion-item>
+
   <ion-item>
    <ion-label>Fecha Expiración de la oferta</ion-label>
     <ion-datetime displayFormat="D / MM / YYYY" min="2019" max="2020" [(ngModel)]="oferta.fechaExpiracion" ></ion-datetime>

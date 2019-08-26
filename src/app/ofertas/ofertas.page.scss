@@ -1,0 +1,73 @@
+/** css Input **/
+
+.background-degradadooferta{
+  --background: linear-gradient(to right,#76cced, #5f78eb);
+}
+
+.no-background{
+  background:transparent;
+}
+
+.margin-card{
+  margin-top: 4%;
+}
+
+.form{
+    width: 100%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+.form input{
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+}
+
+.form label{
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid;
+  border-bottom-color: #dedede;
+}
+
+.form label::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid;
+  border-bottom-color: #3880ff !important;
+  transform: translateX(-100%);
+}
+
+.content-name{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+  transform: translateY(-100%);
+  font-size: 13px;
+  color: #3880ff;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after{
+  transform: translateX(0%);
+  transition: transform 0.3s ease;
+}

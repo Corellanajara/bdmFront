@@ -1,53 +1,157 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+<ion-header class="no-background">
+  <ion-toolbar class="background-degradadohome">
+
+    <ion-buttons>
+      <ion-menu-button slot="start "color="blanco"></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-       <ion-icon slot="end" name="notifications"></ion-icon>
+       <ion-icon slot="end" name="notifications" color="blanco"></ion-icon>
     </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <h2>Home deberia</h2>
-    tener datos de el estado actual de las peticiones, mas a nivel de graficas y reporteria
-    ponte tu
-    <br>
-    <ion-chip>
-      <ion-label>35 traslados exitosos</ion-label>
-    </ion-chip>
 
-    <ion-chip color="secondary">
-      <ion-label color="dark">12 solicitudes de Residuos</ion-label>
-    </ion-chip>
+<ion-content color="fondo">
 
-    <ion-chip color="secondary">
-      <ion-label color="dark">17 otras cosas</ion-label>
-    </ion-chip>
+  <label>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
 
-    <ion-card>
-      <ion-item href="#" class="activated">
-        <ion-icon name="wifi" slot="start"></ion-icon>
-        <ion-label>624 kilos de madera han sido reciclados</ion-label>
-      </ion-item>
+        <ion-card color="blanco">
+         <ion-item lines="none">
+          <ion-label color="sidebar">Traslados Exitosos</ion-label>
+         </ion-item>
+         <ion-item lines="none">
+         <ion-title color="sidebar" class="fuente-roboto ">35</ion-title>
+         <ion-icon slot="icon-only" src="assets/icons/shipped.svg" color="blanco" class="icono-grande"></ion-icon>
+         </ion-item>
+        </ion-card>
+        </ion-col>
 
-      <ion-item href="#">
-        <ion-icon name="wine" slot="start"></ion-icon>
-        <ion-label>1.4 toneladas de cemento fueron despachados</ion-label>
-      </ion-item>
+        <ion-col>
+        <ion-card class="background-degradadohome2">
+            <ion-item class="background-degradadohome" lines="none">
+              <ion-label color="blanco"> Solicitudes de residuos </ion-label>
+            </ion-item>
 
-      <ion-item class="activated">
-        <ion-icon name="warning" slot="start"></ion-icon>
-        <ion-label>3 solicitudes nunca fueron respondidas</ion-label>
-      </ion-item>
+           <ion-item class="background-degradadohome" lines="none">
+              <ion-title color="blanco" class="fuente-roboto">12</ion-title>
+              <ion-icon slot="icon-only" src="assets/icons/shipped.svg" color="blanco" class="icono-grande"></ion-icon>
+           </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-      <ion-item>
-        <ion-icon name="walk" slot="start"></ion-icon>
-        <ion-label>Que se yo , no soy cientifico</ion-label>
-      </ion-item>
+  <ion-card color="blanco" class="margin-card">
+      <ion-card-header color="blanco">
+        <ion-item>
+          <ion-label>Actividades</ion-label>
+
+          <ion-buttons>
+            <ion-button slot="end">
+              <ion-icon slot="icon-only" name="more"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="blanco" class="margin-card">
+      <ion-card-header color="blanco">
+        <ion-item>
+          <ion-label>Rendimiento</ion-label>
+
+          <ion-buttons>
+            <ion-button slot="end">
+              <ion-icon slot="icon-only" name="more"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+    <ion-card color="blanco" class="margin-card">
+        <ion-card-header color="blanco">
+          <ion-item>
+            <ion-label>Estadisticas</ion-label>
+
+            <ion-buttons>
+              <ion-button slot="end">
+                <ion-icon slot="icon-only" name="more"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-item>
+      </ion-card-header>
+
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
     </ion-card>
+
+    <ion-card color="blanco" class="margin-card">
+        <ion-card-header color="blanco">
+          <ion-item>
+            <ion-label>Actividades</ion-label>
+
+            <ion-buttons>
+              <ion-button slot="end">
+                <ion-icon slot="icon-only" name="more"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-item>
+      </ion-card-header>
+
+      <ion-card-content>
+        <canvas #radarCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="blanco" class="margin-card">
+        <ion-card-header color="blanco">
+          <ion-item>
+            <ion-label>Actividades</ion-label>
+
+            <ion-buttons>
+              <ion-button slot="end">
+                <ion-icon slot="icon-only" name="more"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-item>
+      </ion-card-header>
+
+      <ion-card-content>
+        <canvas #polarCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="blanco" class="margin-card">
+        <ion-card-header color="blanco">
+          <ion-item>
+            <ion-label>Actividades</ion-label>
+
+            <ion-buttons>
+              <ion-button slot="end">
+                <ion-icon slot="icon-only" name="more"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-item>
+      </ion-card-header>
+
+      <ion-card-content>
+        <canvas #bubbleCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+</label>
+
 </ion-content>
