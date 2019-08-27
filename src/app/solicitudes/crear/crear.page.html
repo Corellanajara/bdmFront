@@ -1,15 +1,15 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="no-background">
+  <ion-toolbar class="background-degradadocrear">
     <ion-buttons slot="start" (click)="dismiss()">
-      <ion-icon name="return-left"></ion-icon>
+         <ion-icon slot="end" name="arrow-back" color="blanco"></ion-icon>
     </ion-buttons>
-    <ion-title>crear</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<h2 style="text-align:center">Crea tu solicitud!</h2>
-<div class="crear">
+  <ion-toolbar class="background-degradadocrear">
+    <ion-title style="text-align:center" class="centrado" color="blanco">Crea tu solicitud</ion-title>
+  </ion-toolbar>
 
   <ion-item>
    <ion-label>Material</ion-label>
@@ -23,8 +23,6 @@
     <ion-input [(ngModel)]="solicitud.direccion" >Mapa</ion-input>
   </ion-item>
 
-
-</div>
 <ion-button [disabled]="solicitud.material == '' " expand="block" (click)="addSolicitud()" fill="outline">Enviar Datos</ion-button>
 
 </ion-content>

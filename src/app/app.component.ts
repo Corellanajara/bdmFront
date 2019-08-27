@@ -27,7 +27,7 @@ export class AppComponent {
     {
       title: 'Mis Solicitudes',
       url: '/solicitudes',
-      icon: 'dashboard'
+      icon: 'mail-open'
     }
   ];
 

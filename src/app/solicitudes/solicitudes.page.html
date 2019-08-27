@@ -1,22 +1,27 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="no-background">
+  <ion-toolbar class="background-degradadosolicitud">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button slot="start "color="blanco"></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-       <ion-icon slot="end" name="notifications"></ion-icon>
-       <ion-badge color="success">3</ion-badge>
+       <ion-icon slot="end" name="notifications" color="blanco"></ion-icon>
     </ion-buttons>
-    <ion-title>Bolsa de Materiales</ion-title>
+    <ion-title color="blanco">Mis Solicitudes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button size="block" color="success" (click)="presentModal()" >Generar Nueva</ion-button>
+  <ion-fab vertical="center" horizontal="end" slot="fixed">
+    <ion-fab-button class="background-degradadosolicitud" (click)="presentModal()">
+       <ion-icon name="add" color="blanco"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <ion-item>
     <ion-label position="floating">Minimo</ion-label>
     <ion-input [(ngModel)]="minimo"></ion-input>
   </ion-item>
+
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
       pullingIcon="arrow-dropdown"
@@ -25,6 +30,7 @@
       refreshingText="Actualizando...">
     </ion-refresher-content>
   </ion-refresher>
+
   <ion-list>
     <ion-list-header>
       Mis solicitudes
