@@ -22,7 +22,11 @@ const routes: Routes = [
     loadChildren: './ofertas/ofertas.module#OfertasPageModule'
   },
   { path: 'crear', loadChildren: './ofertas/crear/crear.module#CrearPageModule' },
-  
+  { path: 'solicitudes', loadChildren: './solicitudes/solicitudes.module#SolicitudesPageModule' },
+  { path: 'crear', loadChildren: './solicitudes/crear/crear.module#CrearPageModule' },
+  { path: 'ver-solicitud', loadChildren: './list/ver-solicitud/ver-solicitud.module#VerSolicitudPageModule' },
+  { path: 'ver-oferta', loadChildren: './list/ver-oferta/ver-oferta.module#VerOfertaPageModule' },
+
 ];
 
 @NgModule({

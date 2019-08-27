@@ -1,5 +1,7 @@
 {
   "name": "hibrido",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

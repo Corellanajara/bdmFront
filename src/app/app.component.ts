@@ -18,10 +18,16 @@ export class AppComponent {
       title: 'Listar',
       url: '/list',
       icon: 'list'
-    },{
+    },
+    {
       title: 'Mis Ofertas',
       url: '/ofertas',
       icon: 'analytics'
+    },
+    {
+      title: 'Mis Solicitudes',
+      url: '/solicitudes',
+      icon: 'dashboard'
     }
   ];
 

@@ -29,19 +29,31 @@
 
 <ion-card class="margin-card">
   <ion-list  *ngIf="mostrarOfertas">
-    <ion-item *ngFor="let item of ofertas" >
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}} oferta
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
+
+    <ion-item *ngFor="let item of ofertas" (click)="abrirOferta(item)" > <!-- *ngIf="item.precio > minimo " (click)="verData(item)"> -->
+      <ion-avatar slot="start">
+        <img src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.titulo}}</h2>
+        <h3>{{tipoResiduo[item.tipo]}}</h3>
+        <p>{{item.direccion}}</p>
+      </ion-label>
     </ion-item>
+
   </ion-list>
 </ion-card>
 
 <ion-card class="margin-card">
   <ion-list  *ngIf="mostrarDemandas">
     <ion-item *ngFor="let item of demandas" >
+      <ion-avatar slot="start">
+        <img src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.material}}</h2>
+        <p>{{item.direccion || "No hay datos"}}</p>
+      </ion-label>
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
       {{item.title}}
       <div class="item-note" slot="end">

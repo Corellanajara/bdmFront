@@ -9,13 +9,21 @@ import { FormsModule } from '@angular/forms';
 // providers
 import { HttpClientModule } from '@angular/common/http';
 import { OfertasService } from './_services/ofertas.service';
+import { SolicitudesService } from './_services/solicitudes.service';
 //
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CrearPage } from './ofertas/crear/crear.page';
+import { CrearSolicitudPage } from './solicitudes/crear/crear.page';
+import { VerOfertaPage } from './list/ver-oferta/ver-oferta.page';
+
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { MapaPage } from './ofertas/crear/mapa/mapa.page';
+
+
 @NgModule({
-  declarations: [ CrearPage,AppComponent],
-  entryComponents: [ CrearPage],
+  declarations: [ CrearPage,MapaPage,VerOfertaPage, CrearSolicitudPage,AppComponent],
+  entryComponents: [ CrearPage,MapaPage,VerOfertaPage, CrearSolicitudPage],
   imports: [
     BrowserModule,
     FormsModule,
@@ -25,8 +33,10 @@ import { CrearPage } from './ofertas/crear/crear.page';
   ],
   providers: [
     StatusBar,
+    SolicitudesService,
     OfertasService,
     SplashScreen,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

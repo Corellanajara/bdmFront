@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 export class OfertasService {
 
-  private url: string = "http://localhost:4600";
+  private url: string = "http://167.71.160.73:4600/";
 
   constructor(private http: HttpClient) { }
 
