@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 export class SolicitudesService {
 
-  private url: string = "http://localhost:4600/";
+  private url: string = "http://157.230.233.162:4600";
 
   constructor(private http: HttpClient) { }
 
